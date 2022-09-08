@@ -49,6 +49,7 @@ class _ProductDetailsState extends State<ProductDetails> {
   String _appbarPriceString = ". . .";
   String _codeProduct = ". . .";
   String _codeShop = ". . .";
+  String _added_by = ". . .";
   int _currentImage = 0;
   ScrollController _mainScrollController = ScrollController();
   ScrollController _colorScrollController = ScrollController();
@@ -113,6 +114,7 @@ class _ProductDetailsState extends State<ProductDetails> {
       sellerChatTitleController.text =
           productDetailsResponse.detailed_products[0].name;
           _codeShop=productDetailsResponse.detailed_products[0].code_s;
+          _added_by=productDetailsResponse.detailed_products[0].added_by;
     }
 
     setProductDetailValues();
@@ -1365,7 +1367,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     padding: const EdgeInsets.symmetric(horizontal: 0.0),
                     child: Text(
                       //AppLocalizations.of(context).view_shop,
-                      AppLocalizations.of(context).view_shop,
+                      _added_by != "admin" ? AppLocalizations.of(context).view_shop  : '' ,
                       style: TextStyle(
                           decoration: TextDecoration.underline,
                           color: Color.fromRGBO(7, 101, 136, 1),
@@ -1374,7 +1376,7 @@ class _ProductDetailsState extends State<ProductDetails> {
                     ),
                   ),
                 ),
-                Icon(Icons.home, size: 16, color: Color.fromRGBO(7, 101, 136, 1))
+                _added_by != "admin" ?  Icon(Icons.home, size: 16, color: Color.fromRGBO(7, 101, 136, 1)) : Container()
               ],
             ))
       ],
