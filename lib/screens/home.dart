@@ -407,7 +407,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             ),
                             */
 
-                            child: Row(
+                            child:
+                            !_isSellersInitial && _featuredSellersList.length == 0 ? Container() :
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               //mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
@@ -419,6 +421,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                       fontSize: 16
                                   ),
                                 ),
+
 
                                 GestureDetector(
                                   onTap: () {
@@ -463,8 +466,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             0.0,
                           ),
                           child: SizedBox(
-                            height: 117,
-                            child: buildHomeFeaturedSellers1(context),
+                            height: !_isSellersInitial && _featuredSellersList.length == 0 ? 0 : 117,
+                            child: !_isSellersInitial && _featuredSellersList.length == 0 ? Container() : buildHomeFeaturedSellers1(context),
                           ),
                         ),
                       ),
@@ -477,8 +480,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             0.0,
                           ),
                           child: SizedBox(
-                            height: 117,
-                            child: buildHomeFeaturedSellers2(context),
+                            height: !_isSellersInitial && _featuredSellersList.length == 0 ? 0 : 117,
+                            child: !_isSellersInitial && _featuredSellersList.length == 0 ? Container() : buildHomeFeaturedSellers2(context),
                           ),
                         ),
                       ),
@@ -808,7 +811,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             ),
                             */
 
-                            child: Row(
+                            child:
+                            !_isBrandsInitial && _featuredBrandsList.length == 0 ? Container() :
+                            Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               //mainAxisSize: MainAxisSize.max,
                               children: <Widget>[
@@ -864,8 +869,8 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                             0.0,
                           ),
                           child: SizedBox(
-                            height: 117,
-                            child: buildHomeFeaturedBrands1(context),
+                            height: !_isBrandsInitial && _featuredBrandsList.length == 0 ? 0 : 117,
+                            child: !_isBrandsInitial && _featuredBrandsList.length == 0 ? Container() : buildHomeFeaturedBrands1(context),
                           ),
                         ),
                       ),
