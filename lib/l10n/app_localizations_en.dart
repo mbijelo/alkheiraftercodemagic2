@@ -1353,4 +1353,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get selected_for_you => 'Selected for you';
+
+  @override
+  String get supprimer_compte => 'Delete your account';
 }
