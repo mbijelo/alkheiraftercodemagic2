@@ -447,5 +447,6 @@
   "seller_details_screen_btn_view_all_products": "View All Products From This Seller",
   "seller_products_screen_search_products_of_shop": "Search products of shop",
   "view_shop": "View shop",
-  "selected_for_you": "Selected for you"
+  "selected_for_you": "Selected for you",
+  "supprimer_compte": "Delete your account"
 }
