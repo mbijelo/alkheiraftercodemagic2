@@ -16,6 +16,8 @@ import 'package:active_ecommerce_flutter/helpers/shared_value_helper.dart';
 import 'package:active_ecommerce_flutter/app_config.dart';
 import 'package:active_ecommerce_flutter/helpers/auth_helper.dart';
 //import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:active_ecommerce_flutter/screens/devab.dart';
+import 'package:active_ecommerce_flutter/screens/deleteaccount.dart';
 
 
 class MainDrawer extends StatefulWidget {
@@ -29,6 +31,29 @@ class MainDrawer extends StatefulWidget {
 
 class _MainDrawerState extends State<MainDrawer> {
   onTapLogout(context) async {
+    AuthHelper().clearUserData();
+
+    /*
+    var logoutResponse = await AuthRepository()
+            .getLogoutResponse();
+
+
+    if(logoutResponse.result == true){
+         ToastComponent.showDialog(logoutResponse.message, context,
+                   gravity: Toast.CENTER, duration: Toast.LENGTH_LONG);
+         }
+         */
+    Navigator.push(context, MaterialPageRoute(builder: (context) {
+      return Login();
+    }));
+  }
+
+
+
+
+
+
+  onTapLogout1(context) async {
     AuthHelper().clearUserData();
 
     /*
@@ -258,6 +283,33 @@ class _MainDrawerState extends State<MainDrawer> {
                           onTapLogout(context);
                         })
                     : Container(),
+
+                Divider(color: Colors.white),
+
+
+                is_logged_in.$ == true
+                    ?
+                ListTile(
+                    visualDensity:
+                    VisualDensity(horizontal: -4, vertical: -4),
+                    leading: Image.asset("assets/logout.png",
+                        height: 16, color: Colors.white),
+                    title: Text(AppLocalizations.of(context).supprimer_compte,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16)),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                            return deleteaccount(show_back_button: true);
+                          }));
+                    })
+                    : Container(),
+
+
+
+
+
               ],
             ),
           ),
