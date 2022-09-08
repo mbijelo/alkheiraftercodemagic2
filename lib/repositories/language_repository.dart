@@ -32,5 +32,19 @@ class LanguageRepository {
 
 
 
+  Future<LanguageListResponse1> getLanguageList2(id) async {
+    Uri url = Uri.parse(
+        "${AppConfig.BASE_URL}/languages/$id");
+    final response = await http.get(url,headers: {
+      "App-Language": app_language.$,
+    }
+    );
+    //print(response.body.toString());
+    //return languageListResponseFromJson1(response.body);
+  }
+
+
+
+
 
 }
