@@ -2789,6 +2789,9 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Selected for you'**
   String get selected_for_you;
+
+
+  String get supprimer_compte;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
