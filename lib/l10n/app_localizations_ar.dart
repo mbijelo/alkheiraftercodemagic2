@@ -1353,4 +1353,9 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get selected_for_you => 'مختار من أجلك';
+
+  @override
+  String get supprimer_compte => 'حذف حسابك';
+
+
 }
