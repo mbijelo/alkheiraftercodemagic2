@@ -233,6 +233,9 @@ class AppLocalizationsFr extends AppLocalizations {
   String get main_drawer_logout => 'Déconnexion';
 
   @override
+  String get supprimer_compte => 'Supprimer votre compte';
+
+  @override
   String get home_screen_top_categories => 'Catégories principales';
 
   @override
