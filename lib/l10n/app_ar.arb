@@ -447,5 +447,6 @@
   "seller_details_screen_btn_view_all_products": "عرض كل المنتجات من هذا البائع",
   "seller_products_screen_search_products_of_shop": "البحث عن منتجات المتجر",
   "view_shop": "عرض المتجر",
-  "selected_for_you": "مختار من أجلك"
+  "selected_for_you": "مختار من أجلك",
+  "supprimer_compte": "حذف حسابك"
 }
